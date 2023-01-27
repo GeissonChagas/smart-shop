@@ -63,4 +63,14 @@ var products = [
         "quantity": 1
     }
 ];
- 
+
+const smartShop = {
+    data () {
+        return {
+            products: window.products
+        }
+    }
+    
+}
+
+Vue.createApp(smartShop).mount('#app');
