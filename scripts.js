@@ -7,7 +7,7 @@ var products = [
         "quantity": 1
     },
     {
-        "photo": "img/nike-air-force-laranja.pnj",
+        "photo": "img/nike-air-force-laranja.png",
         "name": "Nike Air Force laranja",
         "price": 229.00,
         "active": false,

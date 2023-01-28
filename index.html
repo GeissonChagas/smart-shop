@@ -2,177 +2,65 @@
 
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <title>Self Service Order</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Self Service Order</title>
 
-    </head>
+</head>
 
-    <body>
-        
-        <main id="app">
-            
-            <section class="items">
-                <h4>Selecione os produtos</h4>
-                <div class="product selected">
-                    <div class="photo">
-                        <img src="img/nike-air-force.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Force</span>
-                        <span class="price">$ {{ products[0].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-air-force-laranja.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Force</span>
-                        <span class="price">$ {{ products[1].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-air-max-cinza.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Max</span>
-                        <span class="price">$ {{ products[2].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-air-max-coral.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Max</span>
-                        <span class="price">$ {{ products[3].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-air-max-preto.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Max</span>
-                        <span class="price">$ {{ products[4].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-air-max-preto-e-branco.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Max</span>
-                        <span class="price">$ {{ products[5].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-air-max-rosa.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Air Max</span>
-                        <span class="price">$ {{ products[6].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-club-max.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Club Max</span>
-                        <span class="price">$ {{ products[7].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="photo">
-                        <img src="img/nike-jordan.png">
-                    </div>
-                    <div class="description">
-                        <span class="name">Nike Jordan</span>
-                        <span class="price">$ {{ products[8].price }}</span>
-                        <div class="quantity-area">
-                            <button>-</button>
-                            <span class="quantity">1</span>
-                            <button>+</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<body>
 
-            <section class="summary">
-                <strong>Carrinho:</strong>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1x Nike Jordan</td>
-                            <td>$ {{ products[8].price }}</td>
-                        </tr>
-                        
-                        <tr>
-                            <th>Total</th>
-                            <th>189.00</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+    <main id="app">
 
-        </main>
+        <section class="items">
+            <h4>Selecione os produtos</h4>
+            <div v-for="product in products" class="product">
+                <div class="photo">
+                    <img :src=product.photo>
+                </div>
+                <div class="description">
+                    <span class="name">{{ product.name }}</span>
+                    <span class="price">$ {{ product.price }}</span>
+                    <div class="quantity-area">
+                        <button>-</button>
+                        <span class="quantity">{{ product.quantity }}</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <script src="scripts.js"></script>
-    </body>
+        <section class="summary">
+            <strong>Carrinho:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1x Nike Jordan</td>
+                        <td>$ {{ products[8].price }}</td>
+                    </tr>
+
+                    <tr>
+                        <th>Total</th>
+                        <th>189.00</th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
 
 </html>
