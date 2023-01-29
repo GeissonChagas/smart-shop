@@ -61,7 +61,28 @@ var products = [
         "price": 189.00,
         "active": false,
         "quantity": 1
-    }
+    },
+    {
+        "photo": "img/jordan-branco-vermelho.jpg",
+        "name": "Nike Jordan branco c/ vermelho",
+        "price": 119.00,
+        "active": false,
+        "quantity": 1
+    },
+    {
+        "photo": "img/revolution-feminino.jpg",
+        "name": "Nike Revolution feminino preto",
+        "price": 159.00,
+        "active": false,
+        "quantity": 1
+    },
+    {
+        "photo": "img/winflo-8-azul.jpg",
+        "name": "Nike Winflo 8 azul",
+        "price": 409.00,
+        "active": false,
+        "quantity": 1
+    },
 ];
 
 const smartShop = {

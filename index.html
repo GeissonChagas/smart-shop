@@ -12,29 +12,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>Self Service Order</title>
+    <title>Smart Shop</title>
 
 </head>
 
 <body>
 
+    <div class="banner">
+        <img src="./img/banner.jpg" alt="banner">
+    </div>
+    <div>
+        <h1 class="title">Smart Shop - Ofertas! </h1>
+    </div>
+
     <main id="app">
 
         <section class="items">
             <h4>Selecione os produtos</h4>
-            <div 
-                v-for="product in products" 
-                class="product"
-                v-on:click="product.active = !product.active"
-                :class="product.active ? 'selected' : '' "
-            >
+            <div v-for="product in products" class="product" v-on:click="product.active = !product.active"
+                :class="product.active ? 'selected' : '' ">
                 <div class="photo">
                     <img :src=product.photo>
                 </div>
                 <div class="description">
                     <span class="name">{{ product.name }}</span>
                     <span class="price">$ {{ product.price }}</span>
-                    <div class="quantity-area" v-if ="product.active">
+                    <div class="quantity-area" v-if="product.active">
                         <button @click.stop="product.quantity--" :disabled="product.quantity <= 1">-</button>
                         <span class="quantity">{{ product.quantity }}</span>
                         <button @click.stop="product.quantity++">+</button>
@@ -67,8 +70,13 @@
                 </tbody>
             </table>
         </section>
-
     </main>
+
+    <div>
+        <footer class="footer">
+            <p> &#169; Copyright 2023</p>
+        </footer>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
